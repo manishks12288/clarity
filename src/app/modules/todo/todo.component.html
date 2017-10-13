@@ -1,0 +1,16 @@
+<div class="container-fluid" style="margin-top:100px">
+  <h1> Todo List For User Id: {{this.userId}}</h1>
+  <div class="todo-list">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let todo of todoList"> <span [ngClass]="{'strike-through': todo.completed}">{{todo.title}}</span>
+        <span> <input type="checkbox" [checked]="todo.completed" (change)="updateStatus(todo)"  /></span>
+        <button (click)="deleteTodo(todo.id)" type="button" class="close" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div class="create-todo">
+    <label> Title: </label> <input type="text" [(ngModel)]="todo.title" /> <button class="btn btn-primary" (click)="createTodo();"> Create & Save Todo </button>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.todo-list {
+    height: 400px;
+    width: 700px;
+    margin-left: 240px;
+    overflow-y: auto;
+}
+.strike-through{
+    text-decoration: line-through;
+}
+.create-todo{
+    margin-left: 240px;
+    padding: 10px;
+}

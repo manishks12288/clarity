@@ -1,0 +1,23 @@
+<div class="container-fluid" style="margin-top:100px">
+  <h1> User List </h1>
+  <div *ngFor="let user of userList" class="card card-inverse" style="background-color: #333; border-color: #333; margin-top:5px; color: #fff;" >
+    <div class="card-block" style="padding:5px;">
+      <h3 class="card-title">{{user.name}}</h3>
+      <p class="card-text">email: {{user.email}}</p>
+      <p class="card-text">phone: {{user.phone}}</p>
+      <p class="card-text">website: {{user.website}}</p>
+      <label>
+        <b>Address: </b>
+      </label>
+      <p class="card-text">Street: {{user.address.street}}</p>
+      <p class="card-text">City: {{user.address.city}}</p>
+      <p class="card-text">zip Code: {{user.zipcode}}</p>
+      <label>
+        <b>Company:</b> 
+      </label>
+      <p class="card-text">Name: {{user.company.name}}</p>
+      <p class="card-text">Catch Phrase: {{user.company.catchPhrase}}</p>
+      <button class="btn btn-primary" (click)="goToTodoList(user.id);">View Todos</button>
+    </div>
+  </div>
+</div>
